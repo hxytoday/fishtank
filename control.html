@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Fish Crtl</title>
+</head>
+<body bgcolor="#ff9986">
+
+<center><br /><br /><h1>Fish feed system</h1><br /></center>
+
+
+<table border="1">
+    <tr>
+        <th>水温</th>
+        <th>热水</th>
+        <th>室温</th>
+        <th>湿度</th>
+    </tr>
+    <tr>
+        <td>WaterTemp</td>
+        <td>HwaterTemp</td>
+        <td>IndoorTemp</td>
+        <td>Hum</td>
+    </tr>
+</table>
+
+<table border="1">
+    <tr>
+        <th>水泵</th>
+        <th>加热</th>
+        <th>雾化</th>
+        <th>阀门</th>
+        <th>照明</th>
+    </tr>
+    <tr>
+        <td>PumpState</td>
+        <td>WarmState</td>
+        <td>FogState</td>
+        <td>ValveonState</td>
+        <td>LightState</td>
+    </tr>
+    <tr>
+        <td> <a href="?key=pump_on" >on</a></td>
+        <td> <a href="?key=warm_on" >on</a></td>
+        <td> <a href="?key=fog_on" >on</a></td>
+        <td> <a href="?key=valve_on" >on</a></td>
+        <td> <a href="?key=light_on" >on</a></td>
+    </tr>
+    <tr>
+        <td> <a href="?key=pump_off" >off</a></td>
+        <td> <a href="?key=warm_off" >off</a></td>
+        <td> <a href="?key=fog_off" >off</a></td>
+        <td> <a href="?key=valve_off" >off</a></td>
+        <td> <a href="?key=light_off">off</a></td>
+    </tr>
+</table>
+
+<form action="">
+    喷雾延时:<br>
+    <input type="text" name="" value="10">
+    <br>
+</form>
+<form action="">
+    <input type="button" value="key=on">
+</form>
+</body>
+</html>
