@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f2c40ded-ae19-4b41-9055-8f630ffdb8d7" name="默认更改列表" comment="Initial commit" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="package.json" />
+        <option value="HTML4 File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MicroPythonDevices" devicePath="COM3" autoDetectDevicePath="false" />
+  <component name="ProjectId" id="1m5CPOJmaPFxJon2toWTAa5bfNt" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML4 File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RunManager" selected="MicroPython.Flash web.py">
+    <configuration name="Flash web.py" type="MicroPythonConfigurationType" factoryName="MicroPython" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/web.py">
+      <module name="fish" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Flash " type="MicroPythonConfigurationType" factoryName="MicroPython" singleton="false" path="F:\esp32\fish">
+      <module name="fish" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="MicroPython.Flash web.py" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f2c40ded-ae19-4b41-9055-8f630ffdb8d7" name="默认更改列表" comment="" />
+      <created>1608774039726</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1608774039726</updated>
+      <workItem from="1608774041272" duration="75000" />
+      <workItem from="1608774146818" duration="15874000" />
+      <workItem from="1608859944213" duration="733000" />
+      <workItem from="1608861657540" duration="62000" />
+      <workItem from="1608861733351" duration="549000" />
+      <workItem from="1608864353218" duration="1480000" />
+      <workItem from="1608870042326" duration="2103000" />
+      <workItem from="1608873588753" duration="544000" />
+      <workItem from="1608875577306" duration="38000" />
+      <workItem from="1608886489560" duration="1126000" />
+      <workItem from="1608948421253" duration="377000" />
+      <workItem from="1608948838872" duration="15530000" />
+      <workItem from="1609118910566" duration="7945000" />
+      <workItem from="1609134127510" duration="1473000" />
+      <workItem from="1609138532884" duration="2752000" />
+      <workItem from="1609141494561" duration="5354000" />
+      <workItem from="1609212929126" duration="10813000" />
+      <workItem from="1609292860756" duration="6338000" />
+      <workItem from="1609411710409" duration="913000" />
+      <workItem from="1609723286814" duration="390000" />
+      <workItem from="1609723700053" duration="1348000" />
+      <workItem from="1609725083809" duration="14161000" />
+      <workItem from="1609749930316" duration="2054000" />
+    </task>
+    <task id="LOCAL-00001" summary="Initial commit">
+      <created>1609746167024</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1609746167024</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Initial commit">
+      <created>1609753538411</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1609753538411</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="默认更改列表" />
+    <MESSAGE value="Initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+  </component>
+</project>
