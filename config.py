@@ -29,6 +29,6 @@ def load_file():
     return conf
 
 
-def sava_file(file):
+def sava_file(file) -> object:
     with open('config.json', 'w') as f:
         f.write(file)

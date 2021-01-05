@@ -1,19 +1,26 @@
-from machine import Pin,I2C,Timer
-import onewire,ds18x20,dht,time
+from machine import Pin, Timer
+import onewire, ds18x20, dht, time
+from config import write_conf
+from screen import display
 
-ow=onewire.OneWire(Pin(4))
-ds=ds18x20.DS18X20(ow)
-rom=ds.scan()
+ow = onewire.OneWire(Pin(4))
+ds = ds18x20.DS18X20(ow)
+rom = ds.scan()
+d = dht.DHT11(Pin(27))
 
-def temp_get():
+
+def temp_get(tim):
     ds.convert_temp()
-    tem=ds.read_temp(rom[0])
-    return tem
-
-d=dht.DHT11(Pin(27))
-
-def dht_get():
+    tem = ds.read_temp(rom[0])
+    write_conf('WaterTemp', tem)
     d.measure()
-    tem=d.temperature()
-    hum=d.humidity()
-    return tem,hum
+    airtem = d.temperature()
+    hum = d.humidity()
+    write_conf('AirTemp', airtem)
+    write_conf('Hum', hum)
+    display(tem + airtem + hum)
+
+
+def update_sersor():
+    tim = Timer(-1)
+    tim.init(period=1000, mode=Timer.PERIODIC, callback=temp_get)

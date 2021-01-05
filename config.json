@@ -1,4 +1,8 @@
 {
   "ssid": "HUAWEI_B316_94C4",
-  "password": "clesun123"
+  "password": "clesun123",
+  "Temp": "0",
+  "HTemp": "0",
+  "WaterTemp": "0",
+  "Hum": "0"
 }
