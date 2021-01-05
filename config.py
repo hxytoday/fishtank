@@ -24,11 +24,11 @@ def write_conf(key, value):
 
 
 def load_file():
-    with open('config.json', 'r') as f:
+    with open('config.json', 'r+') as f:
         conf = json.loads(f.read())
     return conf
 
 
-def sava_file(file) -> object:
+def sava_file(file):
     with open('config.json', 'w') as f:
         f.write(file)

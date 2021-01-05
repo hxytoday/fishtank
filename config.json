@@ -4,5 +4,6 @@
   "Temp": "0",
   "HTemp": "0",
   "WaterTemp": "0",
+  "AirTemp": "0",
   "Hum": "0"
 }
