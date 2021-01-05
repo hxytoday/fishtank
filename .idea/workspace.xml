@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f2c40ded-ae19-4b41-9055-8f630ffdb8d7" name="默认更改列表" comment="Initial commit" />
+    <list default="true" id="f2c40ded-ae19-4b41-9055-8f630ffdb8d7" name="默认更改列表" comment="Initial commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/control.py" beforeDir="false" afterPath="$PROJECT_DIR$/control.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,7 +31,13 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="unknown &lt;administrator@hexy1.digitalchina.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MicroPythonDevices" devicePath="COM3" autoDetectDevicePath="false" />
   <component name="ProjectId" id="1m5CPOJmaPFxJon2toWTAa5bfNt" />
@@ -46,7 +55,7 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager" selected="MicroPython.Flash web.py">
+  <component name="RunManager" selected="MicroPython.Flash ">
     <configuration name="Flash web.py" type="MicroPythonConfigurationType" factoryName="MicroPython" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/web.py">
       <module name="fish" />
       <method v="2" />
@@ -95,6 +104,8 @@
       <workItem from="1609723700053" duration="1348000" />
       <workItem from="1609725083809" duration="14161000" />
       <workItem from="1609749930316" duration="2054000" />
+      <workItem from="1609753821696" duration="816000" />
+      <workItem from="1609808019569" duration="1247000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1609746167024</created>
@@ -110,11 +121,49 @@
       <option name="project" value="LOCAL" />
       <updated>1609753538411</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Initial commit">
+      <created>1609754026653</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1609754026653</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Initial commit">
+      <created>1609754356586</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1609754356586</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="默认更改列表" />

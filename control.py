@@ -13,11 +13,7 @@ def Color_buf(color):
         np[i] = color
 
 
-<<<<<<< HEAD
-def lig(co):
-=======
 def light(co):
->>>>>>> Initial commit
     if co == 'r':
         Color_buf(RED)
         np.write()
