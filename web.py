@@ -9,27 +9,29 @@
 #
 # ----------------------------------
 import socket
+import time
 from screen import display
-from led import lamp, music
+from cue import lamp, music
 from control import light
 from config import read_conf
-
+from sensor import temp_get
 def httpserver(wlan):
     addr = (wlan.ifconfig()[0], 80)
     s = socket.socket()
     s.bind(addr)
     s.listen(5)
-    display('s')
+    display('server start')
     while True:
         c, caddr = s.accept()
         c_file = c.makefile('rwb', 0)  # 返回与socket对象关联的文件对象。rwb:支持二进制模式的读写操作 0:默认值，不支持缓存
         req = b''
+
         while True:
             line = c_file.readline()  # 逐行读取文件
             if not line or line == b'\r\n':
                 break
             req += line
-
+        time.sleep_ms(10)
         print("Request:")
         req = req.decode('utf-8').split('\r\n')  # 解码并分割字符
         req_data = req[0].lstrip().rstrip().replace(' ', '').lower()  # 列表第一行去头去尾转换小写

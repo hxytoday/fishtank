@@ -6,7 +6,7 @@ import network
 import time
 from config import read_conf
 from control import light
-from led import lamp, beep, music
+from cue import lamp, beep, music
 from screen import display
 from web import httpserver
 
