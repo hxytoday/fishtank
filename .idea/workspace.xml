@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="f2c40ded-ae19-4b41-9055-8f630ffdb8d7" name="默认更改列表" comment="Initial commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/control.py" beforeDir="false" afterPath="$PROJECT_DIR$/control.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wireless.py" beforeDir="false" afterPath="$PROJECT_DIR$/wireless.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,8 +56,12 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager" selected="MicroPython.Flash ">
+  <component name="RunManager" selected="MicroPython.Flash wireless.py">
     <configuration name="Flash web.py" type="MicroPythonConfigurationType" factoryName="MicroPython" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/web.py">
+      <module name="fish" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Flash wireless.py" type="MicroPythonConfigurationType" factoryName="MicroPython" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/wireless.py">
       <module name="fish" />
       <method v="2" />
     </configuration>
@@ -66,6 +71,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="MicroPython.Flash wireless.py" />
         <item itemvalue="MicroPython.Flash web.py" />
       </list>
     </recent_temporary>
@@ -105,7 +111,7 @@
       <workItem from="1609725083809" duration="14161000" />
       <workItem from="1609749930316" duration="2054000" />
       <workItem from="1609753821696" duration="816000" />
-      <workItem from="1609808019569" duration="1247000" />
+      <workItem from="1609808019569" duration="3223000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1609746167024</created>
@@ -135,7 +141,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609754356586</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Initial commit">
+      <created>1609810328645</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1609810328645</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

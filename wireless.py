@@ -1,47 +1,42 @@
-'''
-实验名称：连接无线路由器
+"""
+名称：连接无线路由器
 版本：v1.0
-日期：2019.8
-作者：01Studio
 说明：编程实现连接路由器，将IP地址等相关信息通过OLED显示（只支持2.4G网络）。
-'''
-import network, time
-from screen import display
+"""
 import socket
+import network
+import time
+from config import read_conf
+from control import light
 from led import lamp, beep, music
-from control import lig
+from screen import display
 
 
 # WIFI连接函数
-def WIFI_Connect(ssid, passwd):
+def wifi_connect():
     wlan = network.WLAN(network.STA_IF)  # STA模式
     wlan.active(True)  # 激活接口
     start_time = time.time()  # 记录时间做超时判断
-
     if not wlan.isconnected():
         print('connecting to network...')
-        wlan.connect(ssid, passwd)  # 输入WIFI账号密码
-
+        ssid = read_conf('ssid')  # 读取WiFi账号密码
+        passwd = read_conf('password')
+        print('ssid is %s , password is %s' % (ssid, passwd))
+        wlan.connect(ssid, passwd)
         while not wlan.isconnected():
-
             # LED闪烁提示
             lamp(4)
-            # beep(400,500)
-
+            beep(400, 500)
             # 超时判断,15秒没连接成功判定为超时
             if time.time() - start_time > 15:
                 print('WIFI Connected Timeout!')
                 break
-
     if wlan.isconnected():
         # LED点亮
-
         lamp('on')
         beep(1000, 500)
-
         # 串口打印信息
         print('network information:', wlan.ifconfig())
-
         # OLED数据显示
         display(wlan.ifconfig()[0])
         httpserver(wlan)
@@ -85,11 +80,11 @@ def httpserver(wlan):
             elif value == 'warm_on':
                 display('warm on')
                 lamp(2)
-                lig('r')
+                light('r')
             elif value == 'warm_off':
                 display('warm off')
                 lamp(2)
-                lig('g')
+                light('g')
             elif value == 'fog_on':
                 display('fog on')
                 lamp(2)
