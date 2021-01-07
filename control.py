@@ -1,25 +1,32 @@
-from machine import Pin, Timer
+from machine import Pin
 from neopixel import NeoPixel
+import random
+import time
 
-RED = (255, 0, 0)
-GREEN = (0, 255, 0)
-BLUE = (0, 0, 255)
+
 pin = Pin(22, Pin.OUT)
 np = NeoPixel(pin, 30)
 
 
-def Color_buf(color):
-    for i in range(30):
-        np[i] = color
+def color_buf(mode, delay=0):
+    if mode == 'on':
+
+        for i in range(30):
+            r = random.randint(0, 255)
+            g = random.randint(0, 255)
+            b = random.randint(0, 255)
+            np[i] = (r, g, b)
+            time.sleep_ms(delay)
+            np.write()
+    elif mode == 'off':
+        for i in range(30):
+            np[i] = (0, 0, 0)
 
 
-def light(co):
-    if co == 'r':
-        Color_buf(RED)
-        np.write()
-    elif co == 'g':
-        Color_buf(GREEN)
-        np.write()
+def light(mode):  # on off
+    if mode == 'on':
+        color_buf(mode,200)
     else:
-        Color_buf(BLUE)
-        np.write()
+        color_buf(mode)
+
+    np.write()

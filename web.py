@@ -55,11 +55,9 @@ def httpserver(wlan):
             elif value == 'warm_on':
                 display('warm on')
                 lamp(2)
-                light('r')
             elif value == 'warm_off':
                 display('warm off')
                 lamp(2)
-                light('g')
             elif value == 'fog_on':
                 display('fog on')
                 lamp(2)
@@ -75,9 +73,11 @@ def httpserver(wlan):
             elif value == 'light_on':
                 display('light on')
                 lamp(2)
+                light('on')
             elif value == 'light_off':
                 display('light off')
                 lamp(2)
+                light('off')
             else:
                 display(value)
                 lamp(5)
