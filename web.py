@@ -15,6 +15,7 @@ from cue import lamp, music
 from control import light
 from config import read_conf
 from sensor import temp_get
+
 def httpserver(wlan):
     addr = (wlan.ifconfig()[0], 80)
     s = socket.socket()
@@ -105,3 +106,4 @@ def httpserver(wlan):
                 c.send(line)
 
         c.close()
+

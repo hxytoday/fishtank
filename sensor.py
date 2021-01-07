@@ -9,9 +9,9 @@ rom = ds.scan()
 d = dht.DHT11(Pin(27))
 
 
-def temp_get():
+def temp_get(tim):
     ds.convert_temp()
-    tem = str('%.2f'%ds.read_temp(rom[0]))
+    tem = str('%.1f'%ds.read_temp(rom[0]))
     write_conf('WaterTemp', tem)
     d.measure()
     airtem = str(d.temperature())
@@ -20,7 +20,7 @@ def temp_get():
     write_conf('Hum', hum)
     display(tem + airtem + hum)
 
-#
-# def update_sersor():
-#     tim = Timer(-1)
-#     tim.init(period=2000, mode=Timer.PERIODIC, callback=temp_get)
+
+def update_sersor():
+    tim = Timer(-1)
+    tim.init(period=10000, mode=Timer.PERIODIC, callback=temp_get)
