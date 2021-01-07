@@ -18,9 +18,8 @@ def temp_get(tim):
     hum = str(d.humidity())
     write_conf('AirTemp', airtem)
     write_conf('Hum', hum)
-    display(tem + airtem + hum)
 
 
-def update_sersor():
+def update_sensor():
     tim = Timer(-1)
     tim.init(period=10000, mode=Timer.PERIODIC, callback=temp_get)

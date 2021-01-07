@@ -19,7 +19,7 @@ def lamp(mode):
         l.value(0)
     elif mode == 'on':
         l.value(1)
-    elif mode > 1 and mode < 100:
+    elif 1 < mode < 100:
         for i in range(0, mode):
             l.value(1)
             time.sleep_ms(200)

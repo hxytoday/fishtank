@@ -14,7 +14,7 @@ from screen import display
 from cue import lamp, music
 from control import light
 from config import read_conf
-from sensor import temp_get
+
 
 def httpserver(wlan):
     addr = (wlan.ifconfig()[0], 80)

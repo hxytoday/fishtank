@@ -1,13 +1,13 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
         "http://www.w3.org/TR/html4/loose.dtd">
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Fish Crtl</title>
 </head>
 <body bgcolor="#ff9986">
 
-<center><br /><br /><h1>Fish feed system</h1><br /></center>
+<div style="text-align: center;"><br /><br /><h1>Fish feed system</h1><br /></div>
 
 
 <table border="1">
@@ -40,29 +40,36 @@
         <td>ValveonState</td>
         <td>LightState</td>
     </tr>
+    <form action="">
     <tr>
-        <td> <a href="?key=pump_on" >on</a></td>
-        <td> <a href="?key=warm_on" >on</a></td>
-        <td> <a href="?key=fog_on" >on</a></td>
-        <td> <a href="?key=valve_on" >on</a></td>
-        <td> <a href="?key=light_on" >on</a></td>
+        <td> <button type="submit" name="key" value="pump_on" >开</button></td>
+        <td> <button type="submit" name="key" value="warm_on" >开</button></td>
+        <td> <button type="submit" name="key" value="fog_on" >开</button></td>
+        <td> <button type="submit" name="key" value="valve_on" >开</button></td>
+        <td> <button type="submit" name="key" value="light_on" >开</button></td>
     </tr>
     <tr>
-        <td> <a href="?key=pump_off" >off</a></td>
-        <td> <a href="?key=warm_off" >off</a></td>
-        <td> <a href="?key=fog_off" >off</a></td>
-        <td> <a href="?key=valve_off" >off</a></td>
-        <td> <a href="?key=light_off">off</a></td>
-    </tr>
+        <td> <button type="submit" name="key" value="pump_off" >关</button></td>
+        <td> <button type="submit" name="key" value="warm_off" >关</button></td>
+        <td> <button type="submit" name="key" value="fog_off" >关</button></td>
+        <td> <button type="submit" name="key" value="valve_off" >关</button></td>
+        <td> <button type="submit" name="key" value="light_off" >关</button></td>
+    </tr></form>
 </table>
 
 <form action="">
     喷雾延时:<br>
-    <input type="text" name="" value="10">
+    <label>
+        <input type="text" name="fog" value="10">
+    </label>
     <br>
+    水泵延时:<br>
+    <label>
+        <input type="text" name="va" value="10">
+    </label>
+    <input type="submit" value="修改">
 </form>
-<form action="">
-    <input type="button" value="key=on">
-</form>
+
+
 </body>
 </html>

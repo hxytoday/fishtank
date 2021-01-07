@@ -3,9 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="f2c40ded-ae19-4b41-9055-8f630ffdb8d7" name="默认更改列表" comment="fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/control.py" beforeDir="false" afterPath="$PROJECT_DIR$/control.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/control.html" beforeDir="false" afterPath="$PROJECT_DIR$/control.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cue.py" beforeDir="false" afterPath="$PROJECT_DIR$/cue.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web.py" beforeDir="false" afterPath="$PROJECT_DIR$/web.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sensor.py" beforeDir="false" afterPath="$PROJECT_DIR$/sensor.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,9 +43,6 @@
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MicroPythonDevices" devicePath="COM3" autoDetectDevicePath="false" />
-  <component name="ProblemsViewState">
-    <option name="selectedIndex" value="1" />
-  </component>
   <component name="ProjectId" id="1m5CPOJmaPFxJon2toWTAa5bfNt" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -58,10 +56,10 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="com.github.izhangzhihao.rainbow.brackets.settings.RainbowConfigurable" />
   </component>
-  <component name="RunManager" selected="MicroPython.Flash control.py">
-    <configuration name="Flash config.py" type="MicroPythonConfigurationType" factoryName="MicroPython" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/config.py">
+  <component name="RunManager" selected="MicroPython.Flash control.html">
+    <configuration name="Flash control.html" type="MicroPythonConfigurationType" factoryName="MicroPython" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/control.html">
       <module name="fish" />
       <method v="2" />
     </configuration>
@@ -87,11 +85,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="MicroPython.Flash control.html" />
         <item itemvalue="MicroPython.Flash control.py" />
         <item itemvalue="MicroPython.Flash web.py" />
         <item itemvalue="MicroPython.Flash sensor.py" />
         <item itemvalue="MicroPython.Flash main.py" />
-        <item itemvalue="MicroPython.Flash config.py" />
       </list>
     </recent_temporary>
   </component>
@@ -135,7 +133,8 @@
       <workItem from="1609923507340" duration="1309000" />
       <workItem from="1609925718860" duration="185000" />
       <workItem from="1609925922785" duration="11000" />
-      <workItem from="1609986590418" duration="5303000" />
+      <workItem from="1609986590418" duration="5410000" />
+      <workItem from="1610002488425" duration="7708000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1609746167024</created>
@@ -207,7 +206,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609987825890</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="fix">
+      <created>1610002345675</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1610002345675</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
