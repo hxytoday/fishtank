@@ -9,14 +9,15 @@
 #
 # ----------------------------------
 import socket
-import time
 from screen import display
 from cue import lamp, music
 from control import light
 from config import read_conf
 
+va = 0
 
 def httpserver(wlan):
+    global va
     addr = (wlan.ifconfig()[0], 80)
     s = socket.socket()
     s.bind(addr)
@@ -26,7 +27,6 @@ def httpserver(wlan):
         c, caddr = s.accept()
         c_file = c.makefile('rwb', 0)  # 返回与socket对象关联的文件对象。rwb:支持二进制模式的读写操作 0:默认值，不支持缓存
         req = b''  # 定义bytes类型字符串
-
         while True:
             line = c_file.readline()  # 逐行读取文件
             if not line or line == b'\r\n':
@@ -41,46 +41,59 @@ def httpserver(wlan):
             continue
         else:
             req_data = req_data.replace('get/?', '').replace('http/1.1', '')
+
             index = req_data.find('key=')
-            value = req_data[index + 4:].lstrip().rstrip()
-            print('key:', value)
-            if value == 'PumpOn':
-                display('Pump on')
-                lamp(2)
-                music('Xxx')
-            elif value == 'PumpOff':
-                display('pump off')
-                music('Dh')
-                lamp(2)
-            elif value == 'warm_on':
-                display('warm on')
-                lamp(2)
-            elif value == 'warm_off':
-                display('warm off')
-                lamp(2)
-            elif value == 'fog_on':
-                display('fog on')
-                lamp(2)
-            elif value == 'fog_off':
-                display('fog off')
-                lamp(2)
-            elif value == 'valve_on':
-                display('valveon on')
-                lamp(2)
-            elif value == 'valve_off':
-                display('valveon off')
-                lamp(2)
-            elif value == 'light_on':
-                display('light on')
-                lamp(2)
-                light('on')
-            elif value == 'light_off':
-                display('light off')
-                lamp(2)
-                light('off')
+            if index > -1:
+                value = req_data[index + 4:].lstrip().rstrip()
+                print('key:', value)
+                if value == 'PumpOn':
+                    display('Pump on')
+                    lamp(2)
+                    music('Xxx')
+                elif value == 'PumpOff':
+                    display('pump off')
+                    music('Dh')
+                    lamp(2)
+                elif value == 'warm_on':
+                    display('warm on')
+                    lamp(2)
+                elif value == 'warm_off':
+                    display('warm off')
+                    lamp(2)
+                elif value == 'fog_on':
+                    display('fog on')
+                    lamp(2)
+                elif value == 'fog_off':
+                    display('fog off')
+                    lamp(2)
+                elif value == 'valve_on':
+                    display('valveon on')
+                    lamp(2)
+                elif value == 'valve_off':
+                    display('valveon off')
+                    lamp(2)
+                elif value == 'light_on':
+                    display('light on')
+                    lamp(2)
+                    light('on')
+                elif value == 'light_off':
+                    display('light off')
+                    lamp(2)
+                    light('off')
+                else:
+                    display(value)
+                    lamp(5)
             else:
-                display(value)
-                lamp(5)
+                index = req_data.find('fog')
+                if index > -1:
+                    req_data = req_data.split('&')
+                    param_data = {}
+                    for i in range(len(req_data)):
+                        data = req_data[i].split('=')
+                        param_data[data[0]] = data[1]
+
+                    print('req_data is:', param_data)
+                    va = param_data.get('va')
 
         with open("control.html", 'r')as f:
 
@@ -106,4 +119,3 @@ def httpserver(wlan):
                 c.send(line)
 
         c.close()
-

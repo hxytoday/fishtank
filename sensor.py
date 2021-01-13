@@ -13,11 +13,13 @@ def temp_get(tim):
     ds.convert_temp()
     tem = str('%.1f'%ds.read_temp(rom[0]))
     write_conf('WaterTemp', tem)
+
     d.measure()
     airtem = str(d.temperature())
     hum = str(d.humidity())
     write_conf('AirTemp', airtem)
     write_conf('Hum', hum)
+    return tem, airtem, hum
 
 
 def update_sensor():

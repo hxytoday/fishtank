@@ -3,10 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="f2c40ded-ae19-4b41-9055-8f630ffdb8d7" name="默认更改列表" comment="fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/control.py" beforeDir="false" afterPath="$PROJECT_DIR$/control.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cue.py" beforeDir="false" afterPath="$PROJECT_DIR$/cue.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sensor.py" beforeDir="false" afterPath="$PROJECT_DIR$/sensor.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web.py" beforeDir="false" afterPath="$PROJECT_DIR$/web.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wireless.py" beforeDir="false" afterPath="$PROJECT_DIR$/wireless.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +39,11 @@
       <list>
         <option value="unknown &lt;administrator@hexy1.digitalchina.com&gt;" />
       </list>
+    </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
@@ -71,7 +77,7 @@
       <module name="fish" />
       <method v="2" />
     </configuration>
-    <configuration name="Flash sensor.py" type="MicroPythonConfigurationType" factoryName="MicroPython" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/sensor.py">
+    <configuration name="Flash cue.py" type="MicroPythonConfigurationType" factoryName="MicroPython" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/cue.py">
       <module name="fish" />
       <method v="2" />
     </configuration>
@@ -86,10 +92,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="MicroPython.Flash web.py" />
+        <item itemvalue="MicroPython.Flash cue.py" />
         <item itemvalue="MicroPython.Flash config.json" />
         <item itemvalue="MicroPython.Flash control.html" />
         <item itemvalue="MicroPython.Flash control.py" />
-        <item itemvalue="MicroPython.Flash sensor.py" />
       </list>
     </recent_temporary>
   </component>
@@ -136,7 +142,7 @@
       <workItem from="1609986590418" duration="5410000" />
       <workItem from="1610002488425" duration="8539000" />
       <workItem from="1610517359347" duration="72000" />
-      <workItem from="1610517450196" duration="5694000" />
+      <workItem from="1610517450196" duration="19864000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1609746167024</created>
@@ -222,7 +228,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610012413644</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="fix">
+      <created>1610526609386</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1610526609386</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

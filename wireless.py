@@ -23,7 +23,7 @@ def wifi_connect():
         wlan.connect(ssid, passwd)
         while not wlan.isconnected():
             # LED闪烁提示
-            lamp(4)
+            lamp(2)
             beep(400, 500)
             # 超时判断,15秒没连接成功判定为超时
             if time.time() - start_time > 15:
