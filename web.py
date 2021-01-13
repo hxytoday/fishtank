@@ -25,17 +25,17 @@ def httpserver(wlan):
     while True:
         c, caddr = s.accept()
         c_file = c.makefile('rwb', 0)  # 返回与socket对象关联的文件对象。rwb:支持二进制模式的读写操作 0:默认值，不支持缓存
-        req = b''
+        req = b''  # 定义bytes类型字符串
 
         while True:
             line = c_file.readline()  # 逐行读取文件
             if not line or line == b'\r\n':
                 break
             req += line
-        time.sleep_ms(10)
+        # time.sleep_ms(10)
         print("Request:")
         req = req.decode('utf-8').split('\r\n')  # 解码并分割字符
-        req_data = req[0].lstrip().rstrip().replace(' ', '').lower()  # 列表第一行去头去尾转换小写
+        req_data = req[0].lstrip().rstrip().replace(' ', '').lower()  # 列表第一个元素去除空格转换小写
         if req_data.find('favicon.ico') > -1:
             c.close()
             continue

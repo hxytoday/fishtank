@@ -28,5 +28,4 @@ def light(mode):  # on off
         color_buf(mode,200)
     else:
         color_buf(mode)
-
     np.write()

@@ -13,7 +13,6 @@ SongDh = [3, 400, 5, 400, 6, 400, 6, 800, 6, 400, 6, 800, 7, 400, 6, 400, 5, 400
 
 
 def lamp(mode):
-    i = 0
     l = Pin(2, Pin.OUT)
     if mode == 'off':
         l.value(0)
