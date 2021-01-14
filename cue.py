@@ -29,7 +29,6 @@ def lamp(mode):
         time.sleep_ms(mode)
         l.value(0)
 
-
 def beep(freq, delay):
     Beep = PWM(Pin(25), freq=0, duty=512)
     Beep.freq(freq)
@@ -38,7 +37,7 @@ def beep(freq, delay):
 
 
 def music(song):
-    global Song
+
     if song == 'Xxx':
         Song = SongXxx
     elif song == 'Dh':

@@ -12,12 +12,13 @@ import socket
 from screen import display
 from cue import lamp, music
 from control import light
-from config import read_conf
 
-va = 0
+
+param_data = {}
+
 
 def httpserver(wlan):
-    global va
+    global param_data
     addr = (wlan.ifconfig()[0], 80)
     s = socket.socket()
     s.bind(addr)
@@ -48,8 +49,8 @@ def httpserver(wlan):
                 print('key:', value)
                 if value == 'PumpOn':
                     display('Pump on')
-                    lamp(2)
                     music('Xxx')
+                    lamp(2)
                 elif value == 'PumpOff':
                     display('pump off')
                     music('Dh')
@@ -93,19 +94,22 @@ def httpserver(wlan):
                         param_data[data[0]] = data[1]
 
                     print('req_data is:', param_data)
-                    va = param_data.get('va')
 
         with open("control.html", 'r')as f:
 
             for line in f:
                 if 'WaterTemp' in line:
-                    line = line.replace('WaterTemp', read_conf('WaterTemp'))
+                    data = param_data.get('WaterTemp')
+                    line = line.replace('WaterTemp', data)
                 elif 'HwaterTemp' in line:
-                    line = line.replace('HwaterTemp', read_conf('HTemp'))
+                    data = param_data.get('HTemp')
+                    line = line.replace('HwaterTemp', data)
                 elif 'IndoorTemp' in line:
-                    line = line.replace('IndoorTemp', read_conf('AirTemp'))
+                    data = param_data.get('AirTemp')
+                    line = line.replace('IndoorTemp', data)
                 elif 'Hum' in line:
-                    line = line.replace('Hum', read_conf('Hum'))
+                    data = param_data.get('Hum')
+                    line = line.replace('Hum', data)
                 elif 'PumpState' in line:
                     line = line.replace('PumpState', '开')
                 elif 'WarmState' in line:

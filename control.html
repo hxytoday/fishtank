@@ -10,7 +10,7 @@
 <div style="text-align: center;"><br /><br /><h1>Fish feed system</h1><br /></div>
 
 
-<table border="1">
+<table border="1" align="center">
     <tr>
         <th>水温</th>
         <th>热水</th>
@@ -25,7 +25,7 @@
     </tr>
 </table>
 
-<table border="1">
+<table border="1" align="center">
     <tr>
         <th>水泵</th>
         <th>加热</th>
@@ -58,18 +58,31 @@
 </table>
 
 <form action="">
-    喷雾延时:<br>
+    喷雾延时:
     <label>
-        <input type="text" name="fog" value="10">
+        <input type="text" class="inbox" name="fog" value="10">
+    </label>
+    水泵延时:
+    <label>
+        <input type="text" class="inbox" name="va" value="10">
+    </label><br>
+    抽水时间:
+    <label>
+        <input type="text" class="inbox" name="va" value="10">
+    </label>
+    抽水间隔:
+    <label>
+        <input type="text" class="inbox" name="va" value="10">
     </label>
     <br>
-    水泵延时:<br>
-    <label>
-        <input type="text" name="va" value="10">
-    </label>
     <input type="submit" value="修改">
 </form>
-
+<style type="text/css">
+    .inbox{
+        width: 30px;
+        height: 20px;
+    }
+</style>
 
 </body>
 </html>
