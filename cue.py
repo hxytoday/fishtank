@@ -38,9 +38,10 @@ def beep(freq, delay):
 
 def music(song):
 
+    global sele
     if song == 'Xxx':
-        Song = SongXxx
+        sele = SongXxx
     elif song == 'Dh':
-        Song = SongDh
-    for index in range(0, len(Song), 2):
-        beep(LeTea6[Song[index] - 1], Song[index + 1])
+        sele = SongDh
+    for index in range(0, len(sele), 2):
+        beep(LeTea6[sele[index] - 1], sele[index + 1])

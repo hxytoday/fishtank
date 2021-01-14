@@ -10,7 +10,8 @@
 # ----------------------------------
 import socket
 from screen import display
-from cue import lamp, music
+from cue import lamp
+from cue import music
 from control import light
 
 
@@ -58,6 +59,7 @@ def httpserver(wlan):
                 elif value == 'warm_on':
                     display('warm on')
                     lamp(2)
+                    music('Xxx')
                 elif value == 'warm_off':
                     display('warm off')
                     lamp(2)
