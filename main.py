@@ -3,9 +3,10 @@ from sensor import update_sensor
 from machine import Pin
 import time
 from cue import music
+from control import servo
 
 KEY = Pin(0, Pin.IN, Pin.PULL_UP)
-
+servo(90)
 
 def fun(KEY):
     time.sleep_ms(10)
@@ -17,5 +18,5 @@ def fun(KEY):
 KEY.irq(fun, Pin.IRQ_FALLING)
 
 update_sensor()
-time.sleep(1)
+time.sleep(10)
 wifi_connect()

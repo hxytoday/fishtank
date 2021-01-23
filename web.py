@@ -12,7 +12,7 @@ import socket
 from screen import display
 from cue import lamp
 from cue import music
-from control import light
+from control import light, servo
 
 
 param_data = {}
@@ -50,11 +50,11 @@ def httpserver(wlan):
                 print('key:', value)
                 if value == 'PumpOn':
                     display('Pump on')
-                    music('Xxx')
+                    servo(90)
                     lamp(2)
                 elif value == 'PumpOff':
                     display('pump off')
-                    music('Dh')
+                    servo(0)
                     lamp(2)
                 elif value == 'warm_on':
                     display('warm on')
@@ -63,6 +63,7 @@ def httpserver(wlan):
                 elif value == 'warm_off':
                     display('warm off')
                     lamp(2)
+                    music('Dh')
                 elif value == 'fog_on':
                     display('fog on')
                     lamp(2)

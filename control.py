@@ -1,11 +1,11 @@
-from machine import Pin
+from machine import Pin, PWM
 from neopixel import NeoPixel
 import random
 import time
 
-
 pin = Pin(22, Pin.OUT)
 np = NeoPixel(pin, 30)
+s1 = PWM(Pin(18), freq=50, duty=0)
 
 
 def color_buf(mode, delay=0):
@@ -25,7 +25,11 @@ def color_buf(mode, delay=0):
 
 def light(mode):  # on off
     if mode == 'on':
-        color_buf(mode,200)
+        color_buf(mode, 200)
     else:
         color_buf(mode)
     np.write()
+
+
+def servo(angle):
+    s1.duty(int(((angle + 90) * 2 / 180 + 0.5) / 20 * 1023))

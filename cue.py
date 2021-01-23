@@ -13,21 +13,22 @@ SongDh = [3, 400, 5, 400, 6, 400, 6, 800, 6, 400, 6, 800, 7, 400, 6, 400, 5, 400
 
 
 def lamp(mode):
-    l = Pin(2, Pin.OUT)
+    led = Pin(2, Pin.OUT)
     if mode == 'off':
-        l.value(0)
+        led.value(0)
     elif mode == 'on':
-        l.value(1)
+        led.value(1)
     elif 1 < mode < 100:
         for i in range(0, mode):
-            l.value(1)
+            led.value(1)
             time.sleep_ms(200)
-            l.value(0)
+            led.value(0)
             time.sleep_ms(200)
     else:
-        l.value(1)
+        led.value(1)
         time.sleep_ms(mode)
-        l.value(0)
+        led.value(0)
+
 
 def beep(freq, delay):
     Beep = PWM(Pin(25), freq=0, duty=512)
@@ -37,7 +38,6 @@ def beep(freq, delay):
 
 
 def music(song):
-
     global sele
     if song == 'Xxx':
         sele = SongXxx
