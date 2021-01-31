@@ -10,3 +10,5 @@ A fish tank controller by ESP32
 通过web配置运行参数
 
 传感器： DS18B20 *2 DHT11*1
+0124：
+AP热点修改无线

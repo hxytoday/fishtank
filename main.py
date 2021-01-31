@@ -3,10 +3,10 @@ from sensor import update_sensor
 from machine import Pin
 import time
 from cue import music
-from control import servo
+import _thread
 
 KEY = Pin(0, Pin.IN, Pin.PULL_UP)
-servo(90)
+
 
 def fun(KEY):
     time.sleep_ms(10)
@@ -17,6 +17,12 @@ def fun(KEY):
 
 KEY.irq(fun, Pin.IRQ_FALLING)
 
-update_sensor()
-time.sleep(10)
-wifi_connect()
+def hi():
+    while True:
+        print('i m test one')
+        time.sleep(10)
+
+
+_thread.start_new_thread(update_sensor, ())
+_thread.start_new_thread(wifi_connect, ())
+# _thread.start_new_thread(hi, ())
