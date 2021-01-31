@@ -17,12 +17,5 @@ def fun(KEY):
 
 KEY.irq(fun, Pin.IRQ_FALLING)
 
-def hi():
-    while True:
-        print('i m test one')
-        time.sleep(10)
-
-
 _thread.start_new_thread(update_sensor, ())
 _thread.start_new_thread(wifi_connect, ())
-# _thread.start_new_thread(hi, ())
