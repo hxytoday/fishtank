@@ -1,7 +1,9 @@
+import dht
+import ds18x20
+import onewire
 from machine import Pin, Timer
-import onewire, ds18x20, dht
-from screen import display
-from web import param_data
+
+from boot import param_data
 
 ow = onewire.OneWire(Pin(4))
 ds = ds18x20.DS18X20(ow)
@@ -19,7 +21,6 @@ def temp_get(tim):
     param_data['AirTemp'] = airtem
     param_data['Hum'] = hum
     param_data['HTemp'] = '99'
-
 
 
 def update_sensor():

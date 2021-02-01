@@ -7,8 +7,17 @@ import time
 from config import read_conf
 from cue import lamp, beep, music
 from screen import display
-from web import httpserver, param_data
+from web import httpserver
+from boot import param_data
 import socket
+import ntptime
+
+
+# 网络校时
+def sync_ntp():
+    ntptime.NTP_DELTA = 3155644800  # 可选 UTC+8偏移时间（秒），不设置就是UTC0
+    ntptime.host = 'ntp1.aliyun.com'  # 可选，ntp服务器，默认是"pool.ntp.org"
+    ntptime.settime()  # 修改设备时间,到这就已经设置好了
 
 
 # WIFI连接函数
@@ -41,6 +50,7 @@ def wifi_connect():
         print('network information:', wlan.ifconfig())
         # OLED数据显示
         display(wlan.ifconfig()[0])
+        sync_ntp()
         httpserver(wlan)
 
 

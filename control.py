@@ -2,13 +2,14 @@ from machine import Pin, PWM
 from neopixel import NeoPixel
 import random
 import time
-from web import param_data
+from boot import param_data
 from config import read_conf
 
 pin = Pin(22, Pin.OUT)
 np = NeoPixel(pin, 30)
 s1 = PWM(Pin(18), freq=50, duty=0)
-autoflag = read_conf(autoflay)
+autoflag = read_conf('autoflay')
+
 '''
 自动参数
 水泵延时valuedelay
@@ -47,6 +48,11 @@ def servo(angle):
     s1.duty(int(((angle + 90) * 2 / 180 + 0.5) / 20 * 1023))
 
 
+start_time = time.time()
+
+
 def auto():
+    global start_time
     while autoflag == 1:
-        pass
+        if start_time / valuedelay == 0:
+            pass
