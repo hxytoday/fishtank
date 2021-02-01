@@ -1,6 +1,5 @@
 import _thread
 import time
-
 from machine import Pin, RTC
 from cue import music
 from sensor import update_sensor

@@ -3,12 +3,11 @@ from neopixel import NeoPixel
 import random
 import time
 from boot import param_data
-from config import read_conf
 
 pin = Pin(22, Pin.OUT)
 np = NeoPixel(pin, 30)
 s1 = PWM(Pin(18), freq=50, duty=0)
-autoflag = read_conf('autoflay')
+autoflag = param_data.get('autoflay')
 
 '''
 自动参数

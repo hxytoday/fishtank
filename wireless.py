@@ -4,7 +4,6 @@
 """
 import network
 import time
-from config import read_conf
 from cue import lamp, beep, music
 from screen import display
 from web import httpserver
@@ -27,8 +26,8 @@ def wifi_connect():
     start_time = time.time()  # 记录时间做超时判断
     if not wlan.isconnected():
         print('connecting to network...')
-        ssid = read_conf('ssid')  # 读取WiFi账号密码
-        passwd = read_conf('password')
+        ssid = param_data.get('ssid')  # 读取WiFi账号密码
+        passwd = param_data.get('password')
         print('ssid is %s , password is %s' % (ssid, passwd))
         wlan.connect(ssid, passwd)
         while not wlan.isconnected():
@@ -98,10 +97,10 @@ def do_ap():
 
             for line in f:
                 if 'user_data1' in line:
-                    data = read_conf('ssid')
+                    data = param_data.get('ssid')
                     line = line.replace('user_data1', str(data))
                 elif 'user_data2' in line:
-                    data = read_conf('password')
+                    data = param_data.get('password')
                     line = line.replace('user_data2', str(data))
                 c.send(line.encode())
 

@@ -2,7 +2,6 @@ import dht
 import ds18x20
 import onewire
 from machine import Pin, Timer
-
 from boot import param_data
 
 ow = onewire.OneWire(Pin(4))
