@@ -1,9 +1,10 @@
 {
-  "ssid": "HUAWEI_B316_94C4",
+  "ssid": "MERCURY_289A",
   "password": "clesun123",
-  "Temp": "0",
-  "HTemp": "0",
-  "WaterTemp": "0",
-  "AirTemp": "0",
-  "Hum": "0"
+  "autoflag": "0",
+  "valuedelay": "0",
+  "valuetime": "0",
+  "valueinterval": "0",
+  "fogdelay": "0",
+  "tem": "0"
 }

@@ -13,13 +13,10 @@ from screen import display
 from cue import lamp
 from cue import music
 from control import light, servo
-
-
-param_data = {}
+from boot import param_data
 
 
 def httpserver(wlan):
-    global param_data
     addr = (wlan.ifconfig()[0], 80)
     s = socket.socket()
     s.bind(addr)
@@ -91,7 +88,6 @@ def httpserver(wlan):
                 index = req_data.find('fog')
                 if index > -1:
                     req_data = req_data.split('&')
-                    param_data = {}
                     for i in range(len(req_data)):
                         data = req_data[i].split('=')
                         param_data[data[0]] = data[1]
@@ -102,16 +98,16 @@ def httpserver(wlan):
 
             for line in f:
                 if 'WaterTemp' in line:
-                    data = param_data.get('WaterTemp')
+                    data = param_data.get('WaterTemp', '999')
                     line = line.replace('WaterTemp', data)
                 elif 'HwaterTemp' in line:
-                    data = param_data.get('HTemp')
+                    data = param_data.get('HTemp', '999')
                     line = line.replace('HwaterTemp', data)
                 elif 'IndoorTemp' in line:
-                    data = param_data.get('AirTemp')
+                    data = param_data.get('AirTemp', '999')
                     line = line.replace('IndoorTemp', data)
                 elif 'Hum' in line:
-                    data = param_data.get('Hum')
+                    data = param_data.get('Hum', '999')
                     line = line.replace('Hum', data)
                 elif 'PumpState' in line:
                     line = line.replace('PumpState', '开')
@@ -123,6 +119,6 @@ def httpserver(wlan):
                     line = line.replace('ValveonState', 'off')
                 elif 'LightState' in line:
                     line = line.replace('LightState', 'off')
-                c.send(line)
+                c.send(line.encode())
 
         c.close()
