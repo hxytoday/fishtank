@@ -8,6 +8,7 @@
 #
 # ----------------------------------
 import json
+from boot import param_data
 
 
 def read_conf(key):
@@ -32,3 +33,9 @@ def load_file():
 def sava_file(file):
     with open('config.json', 'w') as f:
         f.write(file)
+
+
+def sava_all_file():
+    conf = load_file()
+    conf.update(param_data)
+    sava_file(conf)

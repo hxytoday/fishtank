@@ -10,7 +10,7 @@ from web import httpserver
 from boot import param_data
 import socket
 import ntptime
-
+from config import sava_all_file
 
 # 网络校时
 def sync_ntp():
@@ -92,6 +92,7 @@ def do_ap():
                     param_data[data[0]] = data[1]
 
                 print('req_data is:', param_data)
+                sava_all_file()
 
         with open("set.html", 'r')as f:
 
