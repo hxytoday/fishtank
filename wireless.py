@@ -35,7 +35,7 @@ def wifi_connect():
             # lamp(2)
             # beep(400, 500)
             # 超时判断,15秒没连接成功判定为超时
-            if time.time() - start_time > 5:
+            if time.time() - start_time > 10:
                 print('WIFI Connected Timeout!')
                 break
         if not wlan.isconnected():
