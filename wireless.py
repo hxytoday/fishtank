@@ -7,7 +7,7 @@ import time
 from cue import lamp, beep, music
 from screen import display
 from web import httpserver
-from boot import param_data
+from config import param_data
 import socket
 import ntptime
 from config import sava_all_file

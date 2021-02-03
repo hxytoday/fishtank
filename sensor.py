@@ -2,7 +2,7 @@ import dht
 import ds18x20
 import onewire
 from machine import Pin, Timer
-from boot import param_data
+from config import param_data
 
 ow = onewire.OneWire(Pin(4))
 ds = ds18x20.DS18X20(ow)
@@ -16,10 +16,10 @@ def temp_get(tim):
     d.measure()
     airtem = str(d.temperature())
     hum = str(d.humidity())
-    param_data['WaterTemp'] = tem
-    param_data['AirTemp'] = airtem
-    param_data['Hum'] = hum
-    param_data['HTemp'] = '99'
+    param_data["WaterTemp"] = tem
+    param_data["AirTemp"] = airtem
+    param_data["Hum"] = hum
+    param_data["HTemp"] = '99'
 
 
 def update_sensor():

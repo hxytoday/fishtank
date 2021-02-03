@@ -2,7 +2,7 @@ from machine import Pin, PWM
 from neopixel import NeoPixel
 import random
 import time
-from boot import param_data
+from config import param_data
 
 pin = Pin(22, Pin.OUT)
 np = NeoPixel(pin, 30)
@@ -22,7 +22,6 @@ autoflag = param_data.get('autoflay')
 
 def color_buf(mode, delay=0):
     if mode == 'on':
-
         for i in range(30):
             r = random.randint(0, 255)
             g = random.randint(0, 255)

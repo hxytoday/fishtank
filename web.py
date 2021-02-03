@@ -13,7 +13,7 @@ from screen import display
 from cue import lamp
 from cue import music
 from control import light, servo
-from boot import param_data
+from config import param_data
 
 
 def httpserver(wlan):

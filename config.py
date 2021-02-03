@@ -8,7 +8,12 @@
 #
 # ----------------------------------
 import json
-from boot import param_data
+
+param_data = {}
+
+
+def read_param():
+    param_data.update(load_file())
 
 
 def read_conf(key):
