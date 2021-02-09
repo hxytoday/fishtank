@@ -1,6 +1,5 @@
 """
-名称：连接无线路由器
-说明：编程实现连接路由器，将IP地址等相关信息通过OLED显示（只支持2.4G网络）。
+连接路由器，超时进入AP模式
 """
 import network
 import time
@@ -11,6 +10,7 @@ from config import param_data
 import socket
 import ntptime
 from config import sava_all_file
+from machine import reset
 
 # 网络校时
 def sync_ntp():
@@ -93,6 +93,8 @@ def do_ap():
 
                 print('req_data is:', param_data)
                 sava_all_file()
+                reset()
+
 
         with open("set.html", 'r')as f:
 
