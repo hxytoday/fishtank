@@ -7,8 +7,11 @@ from config import param_data
 pin = Pin(22, Pin.OUT)
 np = NeoPixel(pin, 30)
 s1 = PWM(Pin(18), freq=50, duty=0)
+value = Pin(11, Pin.OUT)
 autoflag = param_data.get('autoflay')
-
+value_time = param_data.get('valuetime')
+value_delay = param_data.get('valuedelay')
+water_level = param_data.get('WaterLevel')
 '''
 自动参数
 水泵延时valuedelay
@@ -46,11 +49,41 @@ def servo(angle):
     s1.duty(int(((angle + 90) * 2 / 180 + 0.5) / 20 * 1023))
 
 
-start_time = time.time()
+def value_run():
+    if water_level < 4000:
+        value.value(1)
+    else:
+        value.value(0)
 
+
+
+def value_stop():
+    value.value(0)
+
+def fog_run():    #开启雾化器并触发电磁阀和灯光
+    pass
 
 def auto():
-    global start_time
-    while autoflag == 1:
-        if start_time / valuedelay == 0:
-            pass
+    i = 0
+    now_time = time.time()
+    while autoflag == 1:  # 自动模式下各设备的定时及延时运行
+        if water_level >1000:
+            fog_run()
+        while i <= value_time:
+            value_run()
+            i = time.time() - now_time
+            if i == value_time:
+                now_time = time.time()
+                i = 0
+                break
+
+        while i < value_delay:
+            value_stop()
+            i = time.time() - now_time
+            if i == value_time:
+                now_time = time.time()
+                i = 0
+                break
+
+    while autoflag == 0:  # 非自动模式下各设备的控制以及保护
+        pass
